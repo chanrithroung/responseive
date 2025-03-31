@@ -104,7 +104,6 @@
     margin: 40px auto;
 }
 
-
 .section-1 > h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 400;
@@ -114,27 +113,16 @@
 }
 
 .section-1 > .main-content {
-    height: 600px;
     display: flex;
-    gap: 25px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
 
 .main-content > .content {
-    min-width: 155px;
-    height: 200px;
-    background-color: red;
-    flex-grow: 1;
-    /* height: fit-content; */
-
+    flex: 1 1 calc(50% - 20px);
+    height: fit-content;
 }
-
-.content > img {
-    width: 100%;
-}
-
-
 
 @media (min-width: 630px) {
     .navigation > .collaspe {
@@ -145,3 +133,15 @@
         display: inline-block;
     }
 }
+
+@media (min-width: 995px) {
+    .main-content > .content {
+        flex: 1 1 calc(25% - 20px);
+    }
+}
+
+.content > img {
+    width: 100%;
+}
+
+
