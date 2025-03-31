@@ -1,0 +1,147 @@
+*,
+*::before,
+*::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    /* transition: all 250ms ease; */
+}
+
+:root {
+    --light: #ffffff;
+    --dark: #000000;
+}
+
+
+.navigation {
+    height: auto;
+    width: 100vw;
+    background-color: var(--light);
+    box-shadow: 0 2px 5px rgba(117, 117, 117, 0.231);
+    position: sticky;
+    top: 0;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.navigation > .collaspe {
+    display: none;
+}
+
+.navigation > .collaspe > ul > li {
+    display: inline-block;
+}
+
+.navigation > .collaspe > ul > li > a { 
+    display: inline-block;
+    padding: 15px 20px;
+    font-size: 18px;
+    color: var(--dark);
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 3px;
+}
+.navigation > .collaspe > ul > li > a:hover {
+    background-color: rgba(0, 0, 0, 0.295);
+}
+
+
+.navigation > .navbar-brand > a {
+    display: inline-block;
+    padding: 15px 20px;
+    font-size: 18px;
+    color: var(--dark);
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 3px;
+}
+
+.container {
+    position: relative;
+}
+
+.container > .thumbnail {
+    width: 100vw;
+}
+
+.container > .text-banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 35px;
+    color: white;
+    letter-spacing: 3.5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transform: translate(-50%, -50%) ;
+}
+
+.text-banner > b {
+    background-color: #00000088;
+    padding: 5px 10px;
+}
+
+.text-banner > span { 
+    display: none;
+}
+
+
+.container {
+    width: 95vw;
+    margin: 0 auto;
+}
+
+.container > .thumbnail {
+    width: 100%;
+}
+
+.section-1 {
+    width: 95vw;
+    margin: 40px auto;
+}
+
+
+.section-1 > h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 0.2px solid rgb(226, 226, 226);
+}
+
+.section-1 > .main-content {
+    height: 600px;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+
+.main-content > .content {
+    min-width: 155px;
+    height: 200px;
+    background-color: red;
+    flex-grow: 1;
+    /* height: fit-content; */
+
+}
+
+.content > img {
+    width: 100%;
+}
+
+
+
+@media (min-width: 630px) {
+    .navigation > .collaspe {
+        display: block;
+    }
+
+    .text-banner > span {
+        display: inline-block;
+    }
+}
