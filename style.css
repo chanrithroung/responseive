@@ -14,6 +14,34 @@
 }
 
 
+.mt-5 {
+    margin-top: 1rem;
+}
+
+.text-sltate-50 {
+    color: rgb(107, 107, 107);
+    font-weight: 200;
+}
+
+.text-2xl {
+    font-size: 22px;
+}
+
+.line-height {
+    line-height: 22px;
+}
+.btn {
+    width: 100%;
+    padding: 8px;
+    outline: none;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #dbdbdbfb;
+}
+
+
 .navigation {
     height: auto;
     width: 100vw;
@@ -98,29 +126,65 @@
     width: 100%;
 }
 
-.section-1 {
-    width: 95vw;
+.section-1, .section-2 {
+    width: 85vw;
     margin: 40px auto;
 }
 
-.section-1 > h2 {
+.section-1 > h2, .section-2 > h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
     font-weight: 400;
     margin-bottom: 20px;
     padding-bottom: 20px;
     border-bottom: 0.2px solid rgb(226, 226, 226);
 }
 
-.section-1 > .main-content {
+.section-1 > .main-content, .section-2 > .main-content {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
 }
 
+.section-2 > p {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 
 .main-content > .content {
-    flex: 1 1 calc(50% - 20px);
-    height: fit-content;
+    position: relative;
+    flex: 1 1 100%;
+}
+
+.section-2 > .main-content {
+    margin-top: 50px;
+}
+
+.content img {
+    width: 100%;
+}
+
+.content > .status {
+    padding: 10px 15px;
+    background-color: black;
+    position: absolute;
+    width: fit-content;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 16px;
+}
+
+
+@media (min-width: 600px) {
+    .main-content > .content {
+        flex: 1 1 calc(50% - 20px);
+    }
+
+    .section-1, .section-2 {
+        width: 90vw;
+    }
 }
 
 @media (min-width: 630px) {
@@ -134,11 +198,11 @@
 }
 
 @media (min-width: 995px) {
+    .section-1, .section-2 {
+        width: 95vw;
+    }
     .main-content > .content {
         flex: 1 1 calc(25% - 20px);
     }
 }
 
-.content > img {
-    width: 100%;
-}
