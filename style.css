@@ -6,7 +6,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-    /* transition: all 250ms ease; */
 }
 
 :root {
@@ -143,5 +142,3 @@
 .content > img {
     width: 100%;
 }
-
-
